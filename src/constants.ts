@@ -1,0 +1,11 @@
+export const storeEmergency: string = "EMERGENCY";
+export const storeVsync: string = "VSYNC";
+export const storeAnglecompat: string = "anglecompat";
+export const storeWindowMaximized: string = "window-maximized";
+export const ipcPresence: string = "presence";
+export const ipcDevtools: string = "devtools";
+export const ipcFullscreen: string = "fullscreen";
+export const ipcClose: string = "close";
+export const ipcFlash: string = "flash";
+export const ipcNuke: string = "nuke";
+export const ipcBlockmovement: string = "blockmovement";
