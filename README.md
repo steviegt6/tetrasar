@@ -2,7 +2,7 @@
 Patching-capable (TO-DO), clean-room re-implementation of the TETR.IO Electron `.asar` file in TypeScript with added functionality.
 
 # Building
-Prereuisites:
+Prerequisites:
 * Node.js
 * `npm`
 * `typescript` (`npm i -g typescript`)
