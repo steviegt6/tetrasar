@@ -18,3 +18,19 @@ $ tsc # requires typescript installed globablly, compiles typescript to /dist
 Building is now complete. You'll want to copy over `node_modules/`, `src/assets/`, `package.json`, and `package-lock.json` (optionally) to `dist/` as well. Then run `npm prune --production` in the `dist/` folder to get a production-ready distribution folder.
 
 If you wish you package this into an `.asar` file, you'll want the `asar` `npm` module installed `-g`lobally as well. Once installed, `cd` back one directory and run `asar dist app.asar`, which generates an `.asar` file to use that you can replace the normal TETR.IO `app.asar` with.
+
+# Concepts
+TETR.ASAR is still in an infant state. It is very under-developed and lots of planning must still be done. Concept discussion and feedback is vital.
+
+## HTML Patching
+The first step of HTML patching is to actually hook into the loading of files. This can be done by:
+```ts
+// or really any point in which we wish to load a modified html file...
+window.addEventListener("load", () => {
+    // we have access to the document object which we can query and modify as needed
+    // document.querySelectorAll("blah"); // etc.
+
+    // this will allow us to patch in html, modify existing html, etc.
+    // tetr.io classes and ids are static between versions so worrifying about anything breaking is unneeded
+});
+```
