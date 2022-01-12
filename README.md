@@ -1,13 +1,21 @@
+![tetr.io](https://kagari.moe/outer_assets/tetrio/logo-desktop.png)
+
+*The REAL TETR.ASAR OMG I can't believe it it's real wtf TETR.ASAR!!!!!*
+
 # tetrasar (TETR.ASAR)
+
 Patching-capable (TO-DO), clean-room re-implementation of the TETR.IO Electron `.asar` file in TypeScript with added functionality.
 
 # Building
+
 Prerequisites:
-* Node.js
-* `npm`
-* `typescript` (`npm i -g typescript`)
+
+- Node.js
+- `npm`
+- `typescript` (`npm i -g typescript`)
 
 Building is comically easy.
+
 ```bash
 $ git clone https://github.com/Steviegt6/tetrasar.git
 $ cd tetrasar

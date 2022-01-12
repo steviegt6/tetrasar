@@ -1,6 +1,6 @@
 import { app, powerSaveBlocker, ipcMain, BrowserWindow } from "electron";
-import { log } from "./flavoredLogger";
-import { startIpcClient } from "./discord";
+import { log } from "./utils/flavoredLogger";
+import { createDiscordClient } from "./utils/discordRp";
 import { createWindow, setBlockMovement } from "./windowHandler";
 
 import {
@@ -14,8 +14,8 @@ import {
   ipcFlash,
   ipcNuke,
   ipcBlockmovement,
-} from "./constants.js";
-import { getVal, setVal } from "./store";
+} from "./utils/constants.js";
+import { getVal, setVal } from "./utils/wrappedStore";
 
 import config from "./assets/config.json";
 import { RP } from "discord-rich-presence";
@@ -57,7 +57,7 @@ if (!getVal(storeEmergency)) {
 
   // Initialize the IPC client.
   try {
-    discordIpcClient = startIpcClient();
+    discordIpcClient = createDiscordClient();
   } catch (e) {
     log("Error encountered when initializing Discord IPC client: " + e);
   }

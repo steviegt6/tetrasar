@@ -1,9 +1,9 @@
-import { log } from "./flavoredLogger";
-import { ipcRenderer } from "electron";
+import { log } from "./utils/flavoredLogger";
 import systeminformation, { Systeminformation } from "systeminformation";
+import { ipcRenderer } from "electron";
 
-/*
- * Our funny Window extensions!!!
+/**
+ * Define used window extension definitions.
  */
 declare global {
   interface Window {
@@ -14,7 +14,7 @@ declare global {
   }
 }
 
-// Definitions
+//Populate window extension variables, called in `preload.ts`.
 window.IS_ELECTRON = true;
 window.IPC = ipcRenderer;
 window.BASEBOARD = undefined;

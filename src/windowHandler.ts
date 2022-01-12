@@ -1,9 +1,13 @@
 import { BrowserWindow, dialog, shell } from "electron";
-import { storeEmergency, storeVsync, storeWindowMaximized } from "./constants";
+import {
+  storeEmergency,
+  storeVsync,
+  storeWindowMaximized,
+} from "./utils/constants";
 import { appWindow, setAppWindow } from "./main";
 import config from "./assets/config.json";
 import path from "path";
-import { getVal, setVal } from "./store";
+import { getVal, setVal } from "./utils/wrappedStore";
 
 export var targetAddress: string =
   process.argv[1] && process.argv[1].includes("tetrio://")
